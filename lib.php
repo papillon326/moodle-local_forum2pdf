@@ -1,6 +1,6 @@
 <?php
 
-function local_forum2pdf_extends_settings_navigation(settings_navigation $nav, context $context) {
+function local_forum2pdf_extend_settings_navigation(settings_navigation $nav, context $context) {
     global $PAGE;
     
     // 教師にのみPDF出力を許可
@@ -14,6 +14,7 @@ function local_forum2pdf_extends_settings_navigation(settings_navigation $nav, c
         
         $modulesettings = $nav->get('modulesettings');
         $modulesettings->add_node($pdflink);
+        //echo "<pre>"; var_dump($pdflink); echo "</pre>";
     }
 
 }
